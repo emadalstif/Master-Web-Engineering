@@ -1,0 +1,19 @@
+1.Öffnen Sie Ihre Eingabeaufforderung (Windows) / Terminal (macOS / Linux). Geben Sie den folgenden Befehl ein, um zu überprüfen, ob Python installiert ist:
+
+python -V 
+
+2.Geben Sie den Befehl ein, um den Server in diesem Verzeichnis zu starten:
+
+# Wenn die oben zurückgegebene Python-Version lautet 3.X
+python3 -m http.server
+
+# Wenn die oben zurückgegebene Python-Version lautet 2.X
+python -m SimpleHTTPServer
+
+
+3.Standardmäßig wird der Inhalt des Verzeichnisses auf einem lokalen Webserver an Port 8000 ausgeführt.
+ Sie können zu diesem Server wechseln, indem Sie in Ihrem Webbrowser die URL localhost aufrufen.
+ localhost: 8000
+
+Quelle:
+https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server

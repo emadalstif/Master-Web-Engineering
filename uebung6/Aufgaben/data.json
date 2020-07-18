@@ -1,0 +1,54 @@
+[{
+        "hauptthema": "HTML",
+        "beschreibung": "wiki html",
+        "url": "https://en.wikipedia.org/wiki/HTML#:~:text=Hypertext%20Markup%20Language%20(HTML)%20is,scripting%20languages%20such%20as%20JavaScript.",
+        "nebenthemen": [{
+                "nebenthema": "heading",
+                "beschreibung": "learn heading with w3school",
+                "url": "https://www.w3schools.com/html/"
+
+            },
+            {
+                "nebenthema": "paragraphs",
+                "beschreibung": "learn paragraph with W3c",
+                "url": "https://www.w3.org/html/"
+            }
+
+        ]
+    },
+    {
+        "hauptthema": "CSS",
+        "beschreibung": "Einführung css ",
+        "url": "https://en.wikipedia.org/wiki/Cascading_Style_Sheets",
+        "nebenthemen": [{
+                "nebenthema": "Selectors",
+                "beschreibung": "learn selector",
+                "url": "https://www.w3schools.com/css/"
+            },
+            {
+                "nebenthema": "colors",
+                "beschreibung": "learn css3",
+                "url": "https://www.w3.org/Style/CSS/"
+            }
+
+
+        ]
+    },
+    {
+        "hauptthema": "JavaScript",
+        "beschreibung": "Einführung js",
+        "url": "https://www.w3schools.com/js/",
+        "nebenthemen": [{
+                "nebenthema": "functions",
+                "beschreibung": "learn JS fun",
+                "url": "https://en.wikipedia.org/wiki/JavaScript"
+            },
+            {
+                "nebenthema": "objects",
+                "beschreibung": "learn JS object",
+                "url": "https://en.wikipedia.org/wiki/JavaScript"
+            }
+
+        ]
+    }
+]

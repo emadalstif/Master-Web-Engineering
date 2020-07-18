@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Promisse und fetch</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        // linesplit 
+        //http://scott.sauyet.com/Javascript/Issues/LineSplit/
+        const teiltext = (erstetext, zweitetext) => {
+                ersteteil = erstetext.split(/\r\n|\n/);
+                zeiteteil = zweitetext.split(/\r\n|\n/);
+
+                const iter = Math.max(ersteteil.length, zeiteteil.length);
+
+                var result = "";
+                for (i = 0; i < iter; i++) {
+                    if (i < ersteteil.length)
+                        result += ersteteil[i] + " ";
+                    if (i < zeiteteil.length)
+                        result += zeiteteil[i];
+                    result += "<br>";
+                }
+                return result;
+            }
+            //fetch-API parallel beide Text-Dateien
+            //https://www.codegrepper.com/code-examples/delphi/fetch+a+local+text+file
+            //https://stackoverflow.com/questions/50401390/promises-fetch-in-javascript-how-to-extract-text-from-text-file
+        Promise.all([
+            fetch('./A.txt'),
+            fetch('./B.txt')
+        ]).then(x => {
+            Promise.all([
+                x[0].text(),
+                x[1].text()
+            ]).then(y => {
+                var erste = y[0];
+                var zweite = y[1];
+                console.log("erste Text: " + erste); // erste Text zeigen
+                //Hey
+                //hey
+                console.log("zeite Text:  " + zweite); // zeite Texte zeigen
+                //ich bin Emad,alles gut!
+                //ja alles gut danke!
+                const resultparall = teiltext(erste, zweite); // Beide Texte, die verbunden sind
+                // Hey ich bin Emad,alles gut!
+                //hey ja alles gut danke!
+                document.querySelector('div').innerHTML = resultparall;
+
+            });
+        });
+    </script>
+</body>
+
+</html>

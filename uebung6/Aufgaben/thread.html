@@ -1,0 +1,31 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div id="sortiert"></div>
+    <script type="text/javascript">
+        var arr = [];
+        while (arr.length < 10000) {
+            var r = Math.floor(Math.random() * 10000) + 1;
+            if (arr.indexOf(r) === -1) arr.push(r);
+        }
+        console.log(arr);
+        arr.sort(function(a, b) {
+            return a - b;
+        });
+
+        var start = Date.now(); // milliseconds
+        var x = 0;
+        for (var i = 0; i < 200000000; i++) {
+            x = x + i;
+        }
+        document.body.querySelector("#sortiert").innerHTML = arr
+        console.log('ended in : ', -(start - Date.now()) / 1000, ' seconds');
+    </script>
+
+</body>
+
+</html>

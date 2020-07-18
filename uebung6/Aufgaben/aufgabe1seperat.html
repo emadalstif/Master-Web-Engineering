@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Fetch</title>
+    <style>
+        .container {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button id="button"> load Data A</button>
+        <div></div>
+        <button id="button1"> load Data B</button>
+    </div>
+    <script>
+        document.getElementById("button").addEventListener('click', loadTxtA);
+        document.getElementById("button1").addEventListener('click', loadTxtB);
+
+        function loadTxtA() {
+
+            fetch('A.txt')
+                .then(response => response.text())
+                .then((data) => {
+                    console.log(data)
+                })
+
+        }
+
+        function loadTxtB() {
+            fetch('B.txt')
+                .then(response => response.text())
+                .then((data) => {
+                    console.log(data)
+                })
+
+        }
+    </script>
+</body>
+
+</html>

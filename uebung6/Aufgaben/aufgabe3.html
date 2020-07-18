@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>json</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: green;
+        }
+        
+        div.header ul li div.button {
+            float: left;
+        }
+        
+        div.button {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+        
+        div.button:hover {
+            background-color: red;
+            cursor: pointer;
+        }
+        
+        .layout {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+         :root {
+            --header-height: 20vh;
+            --footer-height: 15vh;
+            --content-height: 75vh;
+            --article-height: var(--content-height);
+            --aside-height: var(--content-height);
+            font-family: sans-serif;
+        }
+        
+        h2 {
+            text-align: center;
+        }
+        
+        .header {
+            width: 100%;
+            background-color: brown;
+        }
+        
+        .nav {
+            width: 20%;
+            background-color: sandybrown;
+        }
+        
+        .article {
+            background-color: skyblue;
+            padding: 1em;
+            width: 60%;
+            text-align: justify;
+            min-height: var(--article-height);
+        }
+        
+        .aside {
+            width: 20%;
+            padding: 1em;
+            background-color: sandybrown;
+        }
+        
+        .footer {
+            display: block;
+            position: fixed;
+            background-color: brown;
+            color: white;
+            height: 35px;
+            width: 100%;
+            bottom: 0px;
+            text-align: center;
+        }
+        
+        #footerTitle {
+            font-size: 23px;
+        }
+        
+        .footerLinks {
+            font-size: 12px;
+            text-decoration: underline
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <button class="header ">
+            
+            <ul>WWW-Navigator</h2></ul>
+        </button>
+        <button class="nav ">
+            <ul></ul>
+        </button>
+        <button class="article "></button>
+        <button class="aside "></button>
+        <button class="footer">
+            <footer>
+                <span id="footerTitle">Footer:</span>
+                <span class="footerLinks">Sitemap</span>
+                <span class="footerLinks">Home</span>
+                <span class="footerLinks">News</span>
+                <span class="footerLinks">Contact</span>
+                <span class="footerLinks">About</span>
+            </footer>
+
+        </button>
+    </div>
+    <script>
+        const uri1 = "./data.json"
+        headerelementen = document.querySelector('button.header ul');
+        navelementen = document.querySelector('button.nav ul');
+        textField = document.querySelector('button.article');
+        aside = document.querySelector('button.aside');
+
+        // fetch data with async await  https://dev.to/shoupn/javascript-fetch-api-and-using-asyncawait-47mp
+        const fetchData = async() => {
+            const response = await Promise.all([fetch(uri1)]);
+            const content = JSON.parse(await Promise.all([response[0].text()]));
+            createnavelementen(content);
+        }
+
+        const createnavelementen = (data) => {
+            data.forEach(element => {
+                createListItem(headerelementen, element.hauptthema, () => {
+                    textField.innerHTML = element.beschreibung;
+                    aside.innerHTML = `<a href="${element.url}">click auf dem Link</a>`;
+                    createNavelementen(element.nebenthemen);
+                });
+            });
+        }
+
+        const createNavelementen = (data) => {
+            removeNavelementen();
+            data.forEach(element => {
+                createListItem(navelementen, element.nebenthema, () => {
+                    textField.innerHTML = element.beschreibung;
+                    aside.innerHTML = `<a href="${element.url}">click auf dem Link</a>`;
+                });
+            });
+        }
+
+        const removeNavelementen = () => {
+            var child = navelementen.firstElementChild;
+            while (child) {
+                navelementen.removeChild(child);
+                child = navelementen.firstElementChild;
+            }
+        }
+
+
+        const createListItem = (list, theme, func) => {
+            const listItem = document.createElement('li');
+            list.appendChild(listItem);
+            listItem.innerHTML = `<div class="button">${theme}</div>`;
+            const deleteButton = listItem.querySelector('div');
+            deleteButton.onclick = () => func();
+        }
+
+        fetchData();
+    </script>
+</body>
+
+</html>
