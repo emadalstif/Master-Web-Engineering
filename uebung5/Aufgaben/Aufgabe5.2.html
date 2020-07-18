@@ -1,0 +1,98 @@
+<html>
+
+<head></head>
+
+<body>
+    <h1>Rednerliste</h1>
+    <label>Neuer Redner:</label>
+    <input type="text">
+    <button>Hinzufügen</button>
+    <ul></ul>
+</body>
+
+<script>
+    const input = document.querySelector('input');
+    const button = document.querySelector('button');
+    const list = document.querySelector('ul');
+    button.onclick = function() {
+        const value = input.value
+        const listItem = document.createElement('li');
+        list.appendChild(listItem);
+        listItem.innerHTML = `${value} <span>time</span> <button>Start</button>`;
+        input.value = "";
+        input.focus();
+        const startStopBtn = listItem.querySelector('button');
+        const timer = listItem.querySelector('span');
+
+        var h = 0;
+        var m = 0;
+        var s = 0;
+        // Stopwatch Script wurde von stckoverflow teilweise genommen
+        //https://stackoverflow.com/questions/35522104/i-guess-i-need-dynamic-variables-in-javascript-to-do-this
+        function StartStopTimer() { // function Timer mit switch https://www.w3schools.com/js/js_timing.asp
+            switch (startStopBtn.textContent) {
+                case 'Stop':
+                    window.clearInterval(timer.value);
+                    startStopBtn.textContent = 'Start';
+                    break;
+                case 'Start':
+                    timer.value = window.setInterval(display, 1000);
+                    startStopBtn.textContent = 'Stop';
+                    var allRedner = list.getElementsByTagName('li')
+                    for (var i = 0, max = allRedner.length; i < max; i++) {
+                        if (allRedner[i] != listItem) {
+                            allRedner[i].querySelector('button').textContent = 'Start'
+                            window.clearInterval(allRedner[i].querySelector('span').value);
+                        }
+                    }
+
+                    break;
+            }
+        }
+
+        StartStopTimer();
+
+        startStopBtn.onclick = StartStopTimer;
+
+        function display() {
+
+            if (s < 10) {
+                var s1 = '0' + s;
+            } else {
+                var s1 = s;
+            }
+            if (m < 10) {
+                var m1 = '0' + m;
+            } else {
+                var m1 = m;
+            }
+            if (h < 10) {
+                var h1 = '0' + h;
+            } else {
+                var h1 = h;
+            }
+            var str = h1 + ':' + m1 + ':' + s1;
+            timer.innerHTML = str;
+            if (s < 59) {
+                s = s + 1;
+            } else {
+                s = 0;
+                m = m + 1;
+
+                if (m == 60) {
+                    m = 0;
+                    h = h + 1;
+                }
+            }
+        }
+
+
+    }
+    input.onkeydown = function(event) {
+        if (event.key === 'Enter') {
+            button.click();
+        }
+    }
+</script>
+
+</html>
