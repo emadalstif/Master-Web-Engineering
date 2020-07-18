@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .layout {
+            display: flex;
+            flex-flow: column wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .header {
+            background-color: brown;
+            text-align: left;
+        }
+        
+        header p {
+            color: white;
+            text-align: center;
+        }
+        
+        header span {
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+        
+        .button {
+            background-color: lightslategray;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+            border-width: 3px;
+            width: 100px;
+            margin: 10px;
+        }
+        
+        body {
+            padding: 2em;
+        }
+        
+        @media (min-width: 450px) {
+            .content {
+                flex: 1 auto;
+                border: 1px solid red;
+            }
+        }
+        
+        @media (min-width: 700px) {
+            .content {
+                flex: 2 0px;
+                order: 1;
+                border: 1px solid black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header">
+            <p class="pcolor">JavaScript</p>
+            <button class="button"><a href="Aufgaben/beispiel1.html">Aufgabe1</a></button>
+            <button class="button"><a href="Aufgaben/beispiel2.html">Aufgabe2</a></button>
+        </header>
+
+    </div>
+
+</body>
+</html
