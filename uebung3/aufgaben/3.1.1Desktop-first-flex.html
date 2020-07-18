@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <style>
+        header {
+            display: flex;
+            height: 40px;
+            background-color: red;
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        
+        #main {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        #links {
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+            background-color: green;
+            width: 20%;
+            height: 800px;
+        }
+        
+        #mitte {
+            background-color: blue;
+            width: 60%;
+            height: 800px;
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        
+        #rechts {
+            width: 20%;
+            background-color: hotpink;
+            height: 800px;
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 800px) {
+            #main {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-top: 5px;
+                height: 100%;
+            }
+            #links {
+                background-color: green;
+                height: 800px;
+                width: 15%;
+                margin-top: 5px;
+            }
+            #mitte {
+                background-color: blue;
+                margin-left: 5px;
+                width: 80%;
+                margin-top: 5px;
+            }
+            #rechts {
+                background-color: hotpink;
+                width: 100%;
+                margin-top: 5px;
+                height: 50px;
+            }
+        }
+        
+        @media (max-width: 450px) {
+            #main {
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+            #links {
+                background-color: green;
+                height: 70px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 5px;
+                width: 100%;
+            }
+            #mitte {
+                background-color: blue;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-top: 5px;
+                width: 100%;
+            }
+            #rechts {
+                background-color: hotpink;
+                height: 50px;
+                margin-left: 5px;
+                margin-right: 5px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">the header</header>
+    <div id="main">
+        <div id="links">aside</div>
+        <div id="mitte">article</div>
+        <div id="rechts">rechts</div>
+    </div>
+</body>
+
+</html>
