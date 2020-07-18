@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .layout {
+            display: flex;
+            flex-flow: column wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .header {
+            background-color: brown;
+            text-align: left;
+        }
+        
+        header p {
+            color: white;
+            text-align: center;
+        }
+        
+        header span {
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+        
+        .button {
+            background-color: lightslategray;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+            border-width: 3px;
+            width: 100px;
+            margin: 10px;
+        }
+        
+        .content {
+            display: fixed;
+            background-color: brown;
+        }
+        
+        main p {
+            color: white;
+        }
+        
+        body {
+            padding: 2em;
+        }
+        
+        footer {
+            background-color: black;
+            color: white;
+            height: 35px;
+            width: 100%;
+            bottom: 0px;
+            text-align: center;
+        }
+        
+        #footerTitle {
+            font-size: 23px;
+        }
+        
+        .footerLinks {
+            font-size: 12px;
+            text-decoration: underline
+        }
+        
+        @media (min-width: 450px) {
+            .content,
+            .footer {
+                flex: 1 auto;
+                border: 1px solid red;
+            }
+            .left,
+            .right {
+                height: auto;
+            }
+        }
+        
+        @media (min-width: 700px) {
+            .content {
+                flex: 2 0px;
+                order: 1;
+                border: 1px solid black;
+            }
+            .footer {
+                order: 2;
+                border: 1px solid black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header">
+            <p class="pcolor">Hompage Master Web Engineering </p>
+            <button class="button"><a href="uebung2/index1.html">Uebung2</a></button>
+            <button class="button"><a href="uebung3/index1.html">Uebung3</a></button>
+            <button class="button"><a href="uebung4/index1.html">Uebung4</a></button>
+            <button class="button"><a href="uebung5/index1.html">Uebung5</a></button>
+            <button class="button"><a href="uebung6/index1.html">Uebung6</a></button>
+            <button class="button"><a href="uebung7/index1.html">Uebung7</a></button>
+            <button class="button"><a href="uebung9/index1.html">Uebung9</a></button>
+            <button class="button"><a href="uebung10/index1.html">Uebung10</a></button>
+        </header>
+        <main class="content">
+            <p>
+                Bei der Übungen 9 (Routing) und 10 (Vue.js) konnte ich die Aufgaben im Server nicht laufen lassen, da man Node.js, npm usw. braucht Man muss die notwendige Tools installieren
+
+            </p>
+
+        </main>
+        <footer>
+            <span id="footerTitle">Emad Alstif</span>
+        </footer>
+    </div>
+
+</body>
+</html
