@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 60px;
+        }
+        
+        #content {
+            background-color: rgb(186, 210, 238);
+            text-align: center;
+            padding: 5px;
+        }
+        
+        #exp {
+            background-color: white;
+            padding-top: 50px;
+            padding-right: 30px;
+            padding-bottom: 50px;
+            padding-left: 80px;
+            height: 500px;
+        }
+        
+        table {
+            text-align: center;
+        }
+        
+        .left {
+            text-align: right;
+            padding-right: 10px;
+        }
+        
+        .right {
+            text-align: left;
+        }
+        
+        td {
+            padding-top: 5px
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <h1>Survey Form</h1>
+        <div id="exp">
+            Let us Know how we can improve freeCodeCamp
+            <table>
+                <tr>
+                    <td class="left">*Name:</td>
+                    <td class="right">
+                        <input type="text" placeholder="Enter your name">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">*Email:</td>
+                    <td class="right">
+                        <input type="text" placeholder="Enter your Email">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">*Age:</td>
+                    <td class="right">
+                        <input type="text" placeholder="Enter your Age">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">Which option best describes your durrent role?</td>
+                    <td class="right">
+                        <select>
+                            <option value="Student">student</option>
+                            <option value="Lehrer">Lehrer</option>
+                            <option value="DR">Dr</option>
+                            </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">* How likely is that you would recommend freeCodeCamp to a friend?</td>
+                    <td class="right">
+                        <input type="radio" id="form">
+                        <label for="form">definitely</label><br>
+                        <input type="radio" id="form">
+                        <label for="form">maybe</label><br>
+                        <input type="radio" id="form">
+                        <label for="form">not sure</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">What do you like in FCC:</td>
+                    <td class="right">
+                        <select>
+                                <option>Select an option</option>
+                                <option>hh</option>
+                                <option>nn</option>
+                               
+                            </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="left">Things that should be improved in future (Check all that apply):</td>
+                    <td class="right">
+                        <input type="checkbox" id="form">
+                        <label for="form">Front-end Projects</label><br>
+                        <input type="checkbox" id="form">
+                        <label for="form">Back-end Projects</label><br>
+                        <input type="checkbox" id="form">
+                        <label for="form">Data Visualizaton</label>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

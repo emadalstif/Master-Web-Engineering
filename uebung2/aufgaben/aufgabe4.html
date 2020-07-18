@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .item1 {
+            grid-area: header;
+        }
+        
+        .item2 {
+            grid-area: nav;
+        }
+        
+        .item3 {
+            grid-area: main;
+        }
+        
+        .item4 {
+            grid-area: side;
+        }
+        
+        .item5 {
+            grid-area: footer;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-areas: 'header header header header header header' 'nav main main main main side' 'footer footer footer footer footer footer';
+            grid-gap: 1em;
+            padding: 5px;
+            grid-template-rows: 30px 430px 30px;
+        }
+        
+        .grid-container>div {
+            border: lightgray 1px solid;
+            text-align: left;
+            border-radius: 5px;
+            padding: 10px 0;
+            font-size: 14px;
+        }
+        
+        .menü {
+            display: grid;
+            grid-gap: 3px;
+            grid-template-row: repeat(3, 1fr);
+            padding: 1px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+        
+        .menü>div {
+            border: lightgray 1px solid;
+            border-radius: 5px;
+            padding: 0 0;
+            grid-auto-row: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2"> Nav
+            <div class="menü">
+                <div>Menuepunkt 1</div>
+                <div>Menuepunkt2</div>
+                <div>Menuepunkt 3</div>
+            </div>
+        </div>
+        <div class="item3">Article1</div>
+        <div class="item4">Side</div>
+        <div class="item5">Footer</div>
+    </div>
+
+</body>
+
+</html>
