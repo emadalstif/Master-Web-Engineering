@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .layout {
+            display: flex;
+            flex-flow: column wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .header {
+            background-color: brown;
+            text-align: left;
+        }
+        
+        header p {
+            color: white;
+            text-align: center;
+        }
+        
+        header span {
+            text-align: center;
+            font-size: 20px;
+            color: white;
+        }
+        
+        .button {
+            background-color: lightslategray;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+            border-width: 3px;
+            width: 100px;
+            margin: 10px;
+        }
+        
+        body {
+            padding: 2em;
+        }
+        
+        @media (min-width: 450px) {
+            .content {
+                flex: 1 auto;
+                border: 1px solid red;
+            }
+        }
+        
+        @media (min-width: 700px) {
+            .content {
+                flex: 1 0px;
+                order: 1;
+                border: 1px solid black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header">
+            <p class="pcolor">Responsive Web Design (RWD)</p>
+            <button class="button"><a href="aufgaben/3.1.1Desktop-first-flex.html">Desktop-first-flex</a></button>
+            <button class="button"><a href="aufgaben/3.1.2Mobile-first-flex.html">Mobile-first-flex</a></button>
+            <button class="button"><a href="aufgaben/3.2.1Desktop-first-grid.html">Desktop-first-grid</a></button>
+            <button class="button"><a href="aufgaben/3.2.1Desktop-first-grid.html">Desktop-first-grid</a></button>
+            <button class="button"><a href="aufgaben/3.3.1flex.html">Holy grail flex</a></button>
+            <button class="button"><a href="aufgaben/3.3.2 grid.html">Holy grail grid</a></button>
+        </header>
+
+    </div>
+
+</body>
+</html
