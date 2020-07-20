@@ -1,3 +1,5 @@
+Es wurde HTTPServer local eingesetzt.
+wie folgend:
 1.Öffnen Sie Ihre Eingabeaufforderung (Windows) / Terminal (macOS / Linux). Geben Sie den folgenden Befehl ein, um zu überprüfen, ob Python installiert ist:
 
 python -V 
