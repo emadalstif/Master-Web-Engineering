@@ -1,4 +1,4 @@
-Es wurde Vue.js/VueCLI installiert und eingesetzt, Es ist schewer npm und die zugehörige Tools schwer auf Github hochzuladen, da die aus großen Datenmengen bestehen.Deshalb werden nur die zwei Folder (public und src) zu den Aufgaben von Vue.js die zwei Folder hinzugefügt.
+Es wurde Vue.js/VueCLI installiert und eingesetzt, Es ist schwer npm und die zugehörige Tools auf Github hochzuladen, da die aus großen Datenmengen bestehen. Deshalb werden nur die zwei Folder (public und src) der Aufgaben von Vue.js hinzugefügt.
 
 Man kann die Vue.js/ VueClI durch den folgendenen Befehlen installeren
 1.Vue Core ---> npm install –save vue
