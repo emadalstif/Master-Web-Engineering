@@ -1,4 +1,4 @@
-Es wurden npm (react-router-dem und react-router) lockl eingesetzt. Es ist schewer die zugehörige Bibliotheken auf Github hochzuladen, da die aus große Datenmenge bestehen. Deshalb werden nur die zwei Folder (public und src) der Aufgabe von Routing hinzugefügt.
+Es wurden npm (react-router-dem und react-router) lockl eingesetzt. Die zugehörige Bibliotheken wurden auf Github nicht hochgeladen, da die aus große Datenmenge bestehen. Deshalb werden nur die zwei Folder (public und src) der Aufgabe von Routing hinzugefügt.
 
 Man findet die Befehlen unter den folgenden Quellen, um node_modules zu installieren:
 
